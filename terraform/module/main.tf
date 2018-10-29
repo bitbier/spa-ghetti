@@ -53,7 +53,7 @@ resource "aws_s3_bucket_policy" "main" {
 resource "aws_cloudfront_distribution" "main" {
   enabled         = true
   http_version    = "http2"
-  price_class     = "PriceClass_All"
+  price_class     = "${var.price_class}"
   is_ipv6_enabled = true
 
   origin {
